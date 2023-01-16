@@ -17,14 +17,14 @@ public class MarcaService {
 	@Autowired
 	private MarcaRepository marcaRepository;
 	
-	public Marca save(Marca curso) {
-		return marcaRepository.save(curso);
+	public Marca save(Marca marca) {
+		return marcaRepository.save(marca);
 	}
 	
 	public List<MarcaDTO> findAll(){		
 		return marcaRepository.findAll()
 				.stream()
-				.map(curso -> new MarcaDTO(curso)).collect(Collectors.toList());		
+				.map(marca -> new MarcaDTO(marca)).collect(Collectors.toList());		
 	}
 	
 	
@@ -32,8 +32,8 @@ public class MarcaService {
 		return marcaRepository.findById(id);
 	}
 	
-	public Marca update(Marca curso) {
-		return marcaRepository.save(curso);
+	public Marca update(Marca marca) {
+		return marcaRepository.save(marca);
 	}
 	
 	public void deleteById(Long id) {

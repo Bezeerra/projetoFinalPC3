@@ -12,26 +12,26 @@ import br.com.trabalhoFinal.repository.VeiculoRepository;
 @Service
 public class VeiculoService {
 	@Autowired
-	private VeiculoRepository aulaRepository;
+	private VeiculoRepository veiculoRepository;
 
-	public Veiculo save(Veiculo aula) {
-		return aulaRepository.save(aula);
+	public Veiculo save(Veiculo veiculo) {
+		return veiculoRepository.save(veiculo);
 	}
 
 	public List<Veiculo> findAll() {
-		return (List<Veiculo>) aulaRepository.findAll();
+		return (List<Veiculo>) veiculoRepository.findAll();
 	}
 
 	public Optional<Veiculo> findById(Long id) {
-		return aulaRepository.findById(id);
+		return veiculoRepository.findById(id);
 	}
 
-	public Veiculo update(Veiculo aula) {
-		return aulaRepository.save(aula);
+	public Veiculo update(Veiculo veiculo) {
+		return veiculoRepository.save(veiculo);
 	}
 
 	public void deleteById(Long id) {
-		aulaRepository.deleteById(id);
+		veiculoRepository.deleteById(id);
 	}
 
 }
